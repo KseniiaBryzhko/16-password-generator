@@ -1,0 +1,157 @@
+/* підключення шрифтів */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Roboto:wght@400;700&display=swap");
+
+/* видима частина вікна браузера */
+body {
+  min-width: 100vw;
+  min-height: 100 vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f7f4;
+  font-family: "Roboto", sans-serif;
+  color: #31292f;
+  font-size: 1.5rem;
+}
+
+/* налаштування блоків, що складають весь компонент */
+.field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+/* текстове поле вводу */
+input[type="text"] {
+  font-family: "Roboto Mono", monospace;
+  background-color: white;
+  box-shadow: 0px 0px 24px #cadbd2;
+  border-radius: 20px;
+  font-size: 2rem;
+  color: black;
+  width: 600px;
+  height: 100px;
+  border: none;
+  margin-bottom: 40px;
+  padding: 0 40px;
+  box-sizing: border-box;
+  margin-right: 18px;
+}
+
+/* елемент для копіювання результату генерації */
+.copy {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  height: 100px;
+  margin-bottom: 40px;
+  color: #7da9ae;
+  min-width: 140px;
+}
+
+/* повідомлення про підтвердження копіювання */
+.copy span {
+  display: none;
+}
+
+/* налаштування візуалізації повідомлення підтвердження та іконки */
+.copy.copied {
+  font-weight: bold;
+  color: #4f9661;
+}
+
+.copy.copied span {
+  display: block;
+}
+
+.copy svg {
+  fill: currentColor;
+  margin-right: 5px;
+}
+
+/* налаштування слайдера */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 385px;
+  margin-right: 10px;
+}
+
+/* налаштування слайдера з вендорними префіксами */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 35px;
+  width: 35px;
+  background: #7da9ae;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  top: -12px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 35px;
+  width: 35px;
+  background: #7da9ae;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  top: -12px;
+}
+
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 35px;
+  width: 35px;
+  background: #7da9ae;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  top: -12px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 9px;
+  width: 100%;
+  background: #cedfe1;
+  border-radius: 4px;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 9px;
+  width: 100%;
+  background: #cedfe1;
+  border-radius: 4px;
+}
+
+input[type="range"]::-ms-track {
+  height: 9px;
+  width: 100%;
+  background: #cedfe1;
+  border-radius: 4px;
+}
+
+/* налаштування чекбоксів-параметрів-умов генерації */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* налаштування зображення чекбоксів-параметрів-умов генерації */
+input[type="checkbox"] + label {
+  background: url("./images/checkbox--unchecked.svg") left top no-repeat;
+  padding-left: 50px;
+  min-height: 35px;
+  cursor: pointer;
+  padding-top: 6px;
+}
+
+input[type="checkbox"]:checked + label {
+  background: url("./images/checkbox--checked.svg") left top no-repeat;
+}
